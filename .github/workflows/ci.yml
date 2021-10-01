@@ -15,6 +15,5 @@ jobs:
         with:
           python-version: 3.x
       - run: pip3 install ansible ansible-lint yamllint
-      - run: |
-          yamllint .
-          ansible-lint
+      - run: yamllint --format parsable .
+      - run: ansible-lint
