@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -e
+
+function puts {
+  echo "[ bootstrap ] $1"
+}
+
+puts "Running bootstrap script..."
+
+puts "Updating PATH..."
+export PATH=$HOME/Library/Python/3.8/bin:$PATH
+
+puts "Upgrading pip..."
+sudo pip3 install --upgrade pip
+
+puts "Installing Ansible..."
+pip3 install ansible
+
+puts "🎉 Done!"
