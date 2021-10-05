@@ -21,3 +21,17 @@ jobs:
       - run: pip3 install ansible ansible-lint yamllint
       - run: yamllint --format parsable .
       - run: ansible-lint
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - macos-11
+    steps:
+      - uses: actions/checkout@v2
+      - name: Uninstall GitHub Actions' pre-installed Homebrew
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+      - name: Run bootstrap script
+        run: bin/bootstrap
+      - run: ansible --version
