@@ -29,9 +29,10 @@ jobs:
         os:
           - macos-11
     steps:
-      - uses: actions/checkout@v2
       - name: Uninstall GitHub Actions' pre-installed Homebrew
+        # yamllint disable-line rule:line-length
         run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+      - uses: actions/checkout@v2
       - name: Run bootstrap script
         run: bin/bootstrap
       - run: ansible --version
