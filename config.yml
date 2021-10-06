@@ -4,4 +4,5 @@ homebrew_taps:
   - homebrew/cask-fonts
   - jgarber623/extras
   - name: jgarber623/private
+    # yamllint disable-line rule:line-length
     url: https://${HOMEBREW_GITHUB_TOKEN}:x-oauth-basic@github.com/jgarber623/homebrew-private
