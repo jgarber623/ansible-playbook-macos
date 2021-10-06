@@ -38,3 +38,5 @@ jobs:
       - run: bin/bootstrap
       - run: ansible-playbook main.yml --syntax-check
       - run: ansible-playbook main.yml
+        env:
+          HOMEBREW_GITHUB_TOKEN: ${{ secrets.HOMEBREW_GITHUB_TOKEN }}
