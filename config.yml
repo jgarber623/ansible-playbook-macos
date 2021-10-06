@@ -4,4 +4,4 @@ homebrew_taps:
   - homebrew/cask-fonts
   - jgarber623/extras
   - name: jgarber623/private
-    url: git@github.com:jgarber623/homebrew-private
+    url: https://${HOMEBREW_GITHUB_TOKEN}:x-oauth-basic@github.com/jgarber623/homebrew-private
