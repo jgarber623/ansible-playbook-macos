@@ -13,6 +13,7 @@
         path: "{{ lookup('env', 'HOME') }}/.brewrc"
         regexp: "^export HOMEBREW_GITHUB_TOKEN="
         line: export HOMEBREW_GITHUB_TOKEN={{ homebrew_github_token }}
+        create: true
   roles:
     - role: geerlingguy.mac.homebrew
   tasks:
