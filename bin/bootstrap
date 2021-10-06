@@ -16,8 +16,8 @@ puts "Installing Ansible..."
 brew install ansible
 puts "✅ Ansible installed!"
 
-puts "Installing Ansible roles..."
-ansible-galaxy role install -r requirements.yml
-puts "✅ Ansible roles installed!"
+puts "Installing Ansible collections and roles..."
+ansible-galaxy install -r requirements.yml
+puts "✅ Ansible collections and roles installed!"
 
 puts "🎉 Done!"
