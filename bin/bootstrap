@@ -13,8 +13,11 @@ puts "Installing Homebrew..."
 puts "✅ Homebrew installed!"
 
 puts "Installing Ansible..."
-brew update
 brew install ansible
 puts "✅ Ansible installed!"
+
+puts "Installing Ansible roles..."
+ansible-galaxy role install -r requirements.yml
+puts "✅ Ansible roles installed!"
 
 puts "🎉 Done!"
