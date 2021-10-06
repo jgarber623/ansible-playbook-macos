@@ -28,11 +28,13 @@ jobs:
       matrix:
         os:
           - macos-11
+    env:
+      ANSIBLE_FORCE_COLOR: 1
     steps:
       - name: Uninstall GitHub Actions' pre-installed Homebrew
         # yamllint disable-line rule:line-length
         run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
       - uses: actions/checkout@v2
-      - name: Run bootstrap script
-        run: bin/bootstrap
-      - run: ansible --version
+      - run: bin/bootstrap
+      - run: ansible-playbook main.yml --syntax-check
+      - run: ansible-playbook main.yml
