@@ -4,6 +4,6 @@
   vars_prompt:
   pre_tasks:
   roles:
-    - geerlingguy.mac.homebrew
+    - role: geerlingguy.mac.homebrew
   tasks:
   post_tasks:
