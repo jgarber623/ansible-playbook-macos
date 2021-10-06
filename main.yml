@@ -1,0 +1,9 @@
+- hosts: localhost
+  vars_files:
+    - config.yml
+  vars_prompt:
+  pre_tasks:
+  roles:
+    - geerlingguy.mac.homebrew
+  tasks:
+  post_tasks:
