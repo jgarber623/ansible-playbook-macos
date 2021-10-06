@@ -6,7 +6,7 @@
   vars_prompt:
     - name: homebrew_github_token
       prompt: "Enter a value for HOMEBREW_GITHUB_TOKEN:"
-      confirm: yes
+      confirm: true
   pre_tasks:
     - name: Ensure ~/.brewrc file exports HOMEBREW_GITHUB_TOKEN
       ansible.builtin.lineinfile:
