@@ -1,8 +1,18 @@
 - hosts: localhost
+  environment:
+    HOMEBREW_GITHUB_TOKEN: "{{ homebrew_github_token }}"
   vars_files:
     - config.yml
   vars_prompt:
+    - name: homebrew_github_token
+      prompt: "Enter a value for HOMEBREW_GITHUB_TOKEN:"
+      confirm: yes
   pre_tasks:
+    - name: Ensure ~/.brewrc file exports HOMEBREW_GITHUB_TOKEN
+      ansible.builtin.lineinfile:
+        path: "{{ lookup('env', 'HOME') }}/.brewrc"
+        regexp: "^export HOMEBREW_GITHUB_TOKEN="
+        line: export HOMEBREW_GITHUB_TOKEN={{ homebrew_github_token }}
   roles:
     - role: geerlingguy.mac.homebrew
   tasks:
