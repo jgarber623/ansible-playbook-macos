@@ -2,7 +2,6 @@ extends: default
 
 rules:
   document-start: disable
-  line-length:
-    level: warning
+  line-length: disable
   truthy:
     check-keys: false
