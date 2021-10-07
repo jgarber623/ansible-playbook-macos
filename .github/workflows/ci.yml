@@ -38,6 +38,15 @@ jobs:
       - name: Configure test environment
         run: cp ./test/config.yml ./config.yml
       - run: bin/bootstrap
-      - run: ansible-playbook main.yml --syntax-check
+      - name: Validate playbook syntax
+        run: ansible-playbook main.yml --syntax-check
       # yamllint disable-line rule:line-length
-      - run: ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
+      - name: Run playbook
+        run: ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
+      # yamllint disable-line rule:line-length
+      - name: Ensure idempotence
+        run: |
+          ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
+          tail $ANSIBLE_LOG_PATH | grep -q 'changed=0.*failed=0' && (echo 'Idempotence check: ✅' && exit 0) || (echo 'Idempotence check: ❌.' && exit 1)
+        env:
+          ANSIBLE_LOG_PATH: ./ansible.log
