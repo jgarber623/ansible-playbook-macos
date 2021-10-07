@@ -9,10 +9,11 @@
       confirm: true
   pre_tasks:
     - name: Include additional custom configuration
-      ansible.builtin.include_vars:
-        file: config.yml
+      include_vars: "{{ item }}"
+      with_fileglob:
+        - config.yml
     - name: Ensure ~/.brewrc file exports HOMEBREW_GITHUB_TOKEN
-      ansible.builtin.lineinfile:
+      lineinfile:
         path: "{{ lookup('env', 'HOME') }}/.brewrc"
         regexp: "^export HOMEBREW_GITHUB_TOKEN="
         line: export HOMEBREW_GITHUB_TOKEN={{ homebrew_github_token }}
