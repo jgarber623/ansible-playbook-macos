@@ -19,6 +19,7 @@
         line: export HOMEBREW_GITHUB_TOKEN={{ homebrew_github_token }}
         create: true
   roles:
+    - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
   tasks:
   post_tasks:
