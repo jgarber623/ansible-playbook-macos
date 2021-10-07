@@ -1,3 +1,7 @@
 homebrew_installed_packages:
   - git
   - wget
+
+homebrew_cask_apps:
+  - firefox
+  - google-chrome

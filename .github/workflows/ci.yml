@@ -33,6 +33,10 @@ jobs:
     steps:
       - name: Uninstall GitHub Actions' pre-installed Homebrew
         run: sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+      - name: Uninstall GitHub Actions' pre-installed browsers
+        run: |
+          sudo rm -rf /Applications/Firefox.app
+          sudo rm -rf /Applications/Google\ Chrome.app
       - uses: actions/checkout@v2
       - name: Configure test environment
         run: cp ./test/config.yml ./config.yml
