@@ -32,7 +32,6 @@ jobs:
       ANSIBLE_FORCE_COLOR: 1
     steps:
       - name: Uninstall GitHub Actions' pre-installed Homebrew
-        # yamllint disable-line rule:line-length
         run: sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
       - uses: actions/checkout@v2
       - name: Configure test environment
@@ -40,10 +39,8 @@ jobs:
       - run: bin/bootstrap
       - name: Validate playbook syntax
         run: ansible-playbook main.yml --syntax-check
-      # yamllint disable-line rule:line-length
       - name: Run playbook
         run: ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
-      # yamllint disable-line rule:line-length
       - name: Ensure idempotence
         run: |
           ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
