@@ -23,6 +23,7 @@
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
     - role: ctorgalson.oh-my-zsh
+      become: true
     - role: geerlingguy.dotfiles
   tasks:
   post_tasks:
