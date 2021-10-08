@@ -5,3 +5,31 @@ homebrew_taps:
   - jgarber623/extras
   - name: jgarber623/private
     url: https://${HOMEBREW_GITHUB_TOKEN}:x-oauth-basic@github.com/jgarber623/homebrew-private
+
+dotfiles_repo: https://github.com/jgarber623/dotfiles
+dotfiles_repo_version: main
+dotfiles_repo_local_destination: ~/.dotfiles
+
+dotfiles_files:
+  - .atom/config.cson
+  - .atom/init.coffee
+  - .atom/keymap.cson
+  - .atom/packages.txt
+  - .atom/snippets.cson
+  - .atom/styles.less
+  - .bundle/config
+  - .oh-my-zsh/functions.zsh
+  - .oh-my-zsh/homebrew.zsh
+  - .oh-my-zsh/rbenv.zsh
+  - .oh-my-zsh/themes/jgarber.zsh-theme
+  - .curlrc
+  - .gemrc
+  - .gitattributes
+  - .gitconfig
+  - .gitignore
+  - .irbrc
+  - .npmrc
+  - .pryrc
+  - .tmux.conf
+  - .wgetrc
+  - .zshrc
