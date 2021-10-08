@@ -35,6 +35,6 @@ dotfiles_files:
   - .zshrc
 
 omz_user:
-  name: "{{ ansible_user }}"
+  name: "{{ ansible_user_id }}"
   group: "{{ ansible_user_gid }}"
 omz_zshrc_create: false
