@@ -18,10 +18,10 @@ dotfiles_files:
   - .atom/snippets.cson
   - .atom/styles.less
   - .bundle/config
-  - .oh-my-zsh/functions.zsh
-  - .oh-my-zsh/homebrew.zsh
-  - .oh-my-zsh/rbenv.zsh
-  - .oh-my-zsh/themes/jgarber.zsh-theme
+  - .oh-my-zsh/custom/functions.zsh
+  - .oh-my-zsh/custom/homebrew.zsh
+  - .oh-my-zsh/custom/rbenv.zsh
+  - .oh-my-zsh/custom/themes/jgarber.zsh-theme
   - .curlrc
   - .gemrc
   - .gitattributes
