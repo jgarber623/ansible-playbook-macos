@@ -18,9 +18,11 @@
         regexp: "^export HOMEBREW_GITHUB_TOKEN="
         line: export HOMEBREW_GITHUB_TOKEN={{ homebrew_github_token }}
         create: true
+      tags: ["homebrew"]
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
+    - role: ctorgalson.oh-my-zsh
     - role: geerlingguy.dotfiles
   tasks:
   post_tasks:

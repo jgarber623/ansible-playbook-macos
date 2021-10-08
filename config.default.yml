@@ -33,3 +33,8 @@ dotfiles_files:
   - .tmux.conf
   - .wgetrc
   - .zshrc
+
+omz_user:
+  name: "{{ ansible_user }}"
+  group: "{{ ansible_user_gid }}"
+omz_zshrc_create: false
