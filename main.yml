@@ -27,7 +27,7 @@
     - role: ctorgalson.oh-my-zsh
       tags: ["dotfiles"]
       become: true
-    - role: geerlingguy.dotfiles
+    - role: jgarber623.dotfiles
       tags: ["dotfiles"]
   tasks:
   post_tasks:
