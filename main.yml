@@ -12,6 +12,7 @@
       include_vars: "{{ item }}"
       with_fileglob:
         - config.yml
+      tags: ["always"]
     - name: Ensure ~/.brewrc file exports HOMEBREW_GITHUB_TOKEN
       lineinfile:
         path: "{{ lookup('env', 'HOME') }}/.brewrc"
@@ -22,8 +23,11 @@
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
+      tags: ["homebrew"]
     - role: ctorgalson.oh-my-zsh
+      tags: ["dotfiles"]
       become: true
     - role: geerlingguy.dotfiles
+      tags: ["dotfiles"]
   tasks:
   post_tasks:
