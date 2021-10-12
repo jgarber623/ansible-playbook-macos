@@ -1,7 +1,7 @@
 roles:
   - name: ctorgalson.oh-my-zsh
   - name: elliotweiser.osx-command-line-tools
-  - name: geerlingguy.dotfiles
+  - src: https://github.com/jgarber623/ansible-role-dotfiles
 
 collections:
   - name: geerlingguy.mac
