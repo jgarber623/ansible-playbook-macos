@@ -1,8 +1,12 @@
 roles:
   - name: ctorgalson.oh-my-zsh
+    version: v2.2.2
   - name: elliotweiser.osx-command-line-tools
+    version: 321bb2e
   - name: jgarber623.dotfiles
     src: https://github.com/jgarber623/ansible-role-dotfiles
+    version: main
 
 collections:
   - name: geerlingguy.mac
+    version: 8b5a464
