@@ -4,7 +4,7 @@
   register: rbenv_binary
 
 - name: Set rbenv's global Ruby version.
-  command: "{{ rbenv_binary.stats.path }} global system"
+  command: "{{ rbenv_binary.stat.path }} global system"
   args:
     creates: "{{ lookup('env', 'HOME') }}/.rbenv/version"
   when: rbenv_binary.stat.exists
