@@ -3,10 +3,12 @@
     path: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}/opt/nvm/nvm.sh"
   register: nvm_script
 
-- name: Set nvm's default version.
-  command: |
-    source {{ nvm_script.stat.path }}
-    nvm alias default system
+- name: Source nvm.
+  command: source {{ nvm_script.stat.path }}
+  when: nvm_script.stat.exists
+
+- name: Set nvm's default Node.js version.
+  command: nvm alias default system
   args:
     creates: "{{ lookup('env', 'NVM_DIR') }}/alias/default"
   when: nvm_script.stat.exists
