@@ -1,5 +1,6 @@
 homebrew_installed_packages:
   - git
+  - rbenv
   - zsh
 
 homebrew_cask_apps:
