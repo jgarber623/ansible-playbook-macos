@@ -1,12 +1,12 @@
 - name: Check if nvm is installed.
   stat:
-    path: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}/opt/nvm/nvm.sh"
+    path: "{{ lookup('env', 'NVM_DIR') }}/nvm.sh"
   register: nvm_script
 
 - name: Check if nvm is activated.
   command: command -v nvm
   register: nvm_activated
-  ignore_errors: true
+  failed_when: false
   when: nvm_script.stat.exists
 
 - name: Source nvm.
