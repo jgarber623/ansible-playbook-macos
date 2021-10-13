@@ -2,11 +2,14 @@ roles:
   - name: ctorgalson.oh-my-zsh
     version: v2.2.2
   - name: elliotweiser.osx-command-line-tools
-    version: 321bb2ec67ec480a9d90739cd9b1473317527bd3
+    src: https://github.com/elliotweiser/ansible-osx-command-line-tools
+    version: 321bb2e
   - name: jgarber623.dotfiles
     src: https://github.com/jgarber623/ansible-role-dotfiles
     version: main
 
 collections:
   - name: geerlingguy.mac
-    version: 8b5a464da7f22c29f26dc1a0684b9df6b7fdedca
+    source: https://github.com/geerlingguy/ansible-collection-mac
+    type: git
+    version: 8b5a464
