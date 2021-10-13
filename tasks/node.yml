@@ -1,4 +1,12 @@
+- name: Check if nvm is installed.
+  stat:
+    path: "{{ lookup('env', 'NVM_DIR') }}/nvm.sh"
+  register: nvm_script
+
 - name: Set nvm's default version.
-  command: nvm alias default system
+  command: |
+    source {{ nvm_script.stat.path }}
+    nvm alias default system
   args:
     creates: "{{ lookup('env', 'NVM_DIR') }}/alias/default"
+  when: nvm_script.stat.exists
