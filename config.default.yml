@@ -1,11 +1,3 @@
-homebrew_taps:
-  - heroku/brew
-  - homebrew/cask-drivers
-  - homebrew/cask-fonts
-  - jgarber623/extras
-  - name: jgarber623/private
-    url: https://${HOMEBREW_GITHUB_TOKEN}:x-oauth-basic@github.com/jgarber623/homebrew-private
-
 dotfiles_repo: https://github.com/jgarber623/dotfiles
 dotfiles_repo_version: main
 dotfiles_repo_local_destination: ~/.dotfiles
@@ -33,6 +25,117 @@ dotfiles_files:
   - .tmux.conf
   - .wgetrc
   - .zshrc
+
+homebrew_taps:
+  - heroku/brew
+  - homebrew/cask-drivers
+  - homebrew/cask-fonts
+  - jgarber623/extras
+  - name: jgarber623/private
+    url: https://${HOMEBREW_GITHUB_TOKEN}:x-oauth-basic@github.com/jgarber623/homebrew-private
+
+homebrew_installed_packages:
+  - base64
+  - circleci
+  - fd
+  - gh
+  - git
+  - gnupg
+  - grpcurl
+  - heroku
+  - hr
+  - htop
+  - jq
+  - lame
+  - lynx
+  - mas
+  - nano
+  - nmap
+  - node
+  - nvm
+  - openssh
+  - pidof
+  - pygments
+  - rbenv
+  - rbenv-aliases
+  - rbenv-default-gems
+  - jgarber623/extras/rbenv-each
+  - jgarber623/extras/rbenv-env
+  - jgarber623/extras/rbenv-gem-update
+  - rbenv-use
+  - ruby-build
+  - screen
+  - tmux
+  - trash
+  - tree
+  - xh
+  - wget
+  - wrk
+  - yarn
+  - ykman
+  - youtube-dl
+  - zsh
+
+homebrew_cask_apps:
+  - 1password
+  - alfred
+  - appcleaner
+  - atom
+  - bartender
+  - devdocs
+  - docker
+  - encryptme
+  - firefox
+  - fission
+  - font-b612
+  - jgarber623/extras/font-bodoni
+  - jgarber623/private/font-boss
+  - font-cascadia-code
+  - font-ia-writer-duo
+  - font-ia-writer-duospace
+  - font-ia-writer-mono
+  - font-ia-writer-quattro
+  - font-ibm-plex
+  - jgarber623/extras/font-jost
+  - font-lato
+  - jgarber623/private/font-museo
+  - jgarber623/private/font-museo-sans
+  - jgarber623/private/font-museo-slab
+  - font-national-park
+  - font-new-york
+  - jgarber623/private/font-operator-mono
+  - jgarber623/private/font-operator-pro
+  - font-optician-sans
+  - font-public-sans
+  - font-sf-compact
+  - font-sf-mono
+  - font-sf-pro
+  - jgarber623/extras/font-techna-sans
+  - font-vollkorn
+  - font-work-sans
+  - github
+  - google-chrome
+  - google-cloud-sdk
+  - handbrake
+  - imagealpha
+  - imageoptim
+  - insomnia
+  - little-snitch
+  - menuwhere
+  - micro-snitch
+  - monity-helper
+  - onyx
+  - proxyman
+  - psequel
+  - rocket
+  - screens
+  - signal
+  - sketch
+  - transmission
+  - transmit
+  - vlc
+  - vmware-fusion
+  - yubico-yubikey-manager
 
 omz_user:
   name: "{{ ansible_user_id }}"
