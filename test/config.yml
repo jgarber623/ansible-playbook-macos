@@ -1,5 +1,5 @@
 homebrew_installed_packages:
-  - git
+  - nvm
   - rbenv
   - zsh
 
