@@ -1,6 +1,6 @@
 - name: Check if nvm is installed.
   stat:
-    path: "{{ lookup('env', 'NVM_DIR') }}/nvm.sh"
+    path: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}/opt/nvm/nvm.sh"
   register: nvm_script
 
 - name: Set nvm's default version.
