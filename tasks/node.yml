@@ -3,9 +3,14 @@
     path: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}/opt/nvm/nvm.sh"
   register: nvm_script
 
+- name: Check if nvm is activated.
+  command: command -v nvm
+  register: nvm_activated
+  when: nvm_script.stat.exists
+
 - name: Source nvm.
   command: source {{ nvm_script.stat.path }}
-  when: nvm_script.stat.exists
+  when: nvm_script.stat.exists and nvm_activated.stat.rc != 0
 
 - name: Set nvm's default Node.js version.
   command: nvm alias default system
