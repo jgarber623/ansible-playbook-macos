@@ -6,12 +6,12 @@
 - name: Check if nvm is activated.
   command: command -v nvm
   register: nvm_activated
-  failed_when: false
+  ignore_errors: true
   when: nvm_script.stat.exists
 
 - name: Source nvm.
   command: source {{ nvm_script.stat.path }}
-  when: nvm_script.stat.exists and nvm_activated.stat.rc != 0
+  when: nvm_script.stat.exists and nvm_activated.rc != 0
 
 - name: Set nvm's default Node.js version.
   command: nvm alias default system
