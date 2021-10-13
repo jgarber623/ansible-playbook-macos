@@ -1,2 +1,4 @@
 - name: Set nvm's default version.
   command: nvm alias default system
+  args:
+    creates: "{{ lookup('env', 'NVM_DIR') }}/alias/default"

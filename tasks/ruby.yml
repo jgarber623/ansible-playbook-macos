@@ -1,6 +1,8 @@
 - name: Set rbenv's global Ruby version.
-  command: rbenv global system
+  command: $(brew --prefix)/bin/rbenv global system
+  args:
+    creates: "{{ lookup('env', 'HOME') }}/.rbenv/version"
 
 - name: Install default gems to system Ruby.
   command: gem install {{ item }}
-  with_lines: cat ~/.rbenv/default-gems
+  with_lines: cat {{ lookup('env', 'HOME') }}/.rbenv/default-gems
