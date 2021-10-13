@@ -37,6 +37,8 @@ jobs:
         run: |
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
+      - name: Uninstall GitHub Actions' pre-installed nvm
+        run: rm -rf "$NVM_DIR"
       - uses: actions/checkout@v2
       - name: Configure test environment
         run: cp ./test/config.yml ./config.yml
@@ -48,6 +50,6 @@ jobs:
       - name: Ensure idempotence
         run: |
           ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
-          tail $ANSIBLE_LOG_PATH | grep -q 'changed=0.*failed=0' && (echo '✅ Idempotence check passed!' && exit 0) || (echo '❌ Idempotence check failed!' && exit 1)
+          tail "$ANSIBLE_LOG_PATH" | grep -q 'changed=0.*failed=0' && (echo '✅ Idempotence check passed!' && exit 0) || (echo '❌ Idempotence check failed!' && exit 1)
         env:
           ANSIBLE_LOG_PATH: ./ansible.log
