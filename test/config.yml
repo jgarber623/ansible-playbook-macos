@@ -7,3 +7,5 @@ homebrew_cask_apps:
   - atom
   - firefox
   - google-chrome
+
+mas_installed_apps: []

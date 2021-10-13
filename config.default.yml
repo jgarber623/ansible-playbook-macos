@@ -1,3 +1,5 @@
+configure_dotfiles: true
+
 dotfiles_repo: https://github.com/jgarber623/dotfiles
 dotfiles_repo_version: main
 dotfiles_repo_local_destination: ~/.dotfiles
@@ -141,7 +143,82 @@ homebrew_cask_apps:
   - vmware-fusion
   - yubico-yubikey-manager
 
+mas_installed_apps:
+  - name: 1Blocker
+    id: 1365531024
+  - name: Airmail
+    id: 918858936
+  - name: Bear
+    id: 1091189122
+  - name: Cardhop
+    id: 1290358394
+  - name: Clear
+    id: 504544917
+  - name: Contrast
+    id: 1254981365
+  - name: Day One
+    id: 1055511498
+  - name: Deliveries
+    id: 924726344
+  - name: Fantastical
+    id: 975937182
+  - name: GarageBand
+    id: 682658836
+  - name: GIF Brewery 3
+    id: 1081413713
+  - name: GoodNotes
+    id: 1444383602
+  - name: Icon Slate
+    id: 439697913
+  - name: iMovie
+    id: 408981434
+  - name: Instapaper
+    id: 288545208
+  - name: Instapaper Save
+    id: 1481302432
+  - name: JSONPeep
+    id: 1458969831
+  - name: Keynote
+    id: 409183694
+  - name: Keypad
+    id: 928906884
+  - name: Mactracker
+    id: 430255202
+  - name: Marked 2
+    id: 890031187
+  - name: Monity
+    id: 915542151
+  - name: Moom
+    id: 419330170
+  - name: Name Mangler
+    id: 603637384
+  - name: Numbers
+    id: 409203825
+  - name: Pages
+    id: 409201541
+  - name: Paprika Recipe Manager 3
+    id: 1303222628
+  - name: Patterns
+    id: 429449079
+  - name: Pixelmator
+    id: 407963104
+  - name: Pixelmator Pro
+    id: 1289583905
+  - name: Playgrounds
+    id: 1496833156
+  - name: Reeder
+    id: 1529448980
+  - name: Slack
+    id: 803453959
+  - name: StopTheMadness
+    id: 1376402589
+  - name: The Unarchiver
+    id: 425424353
+  - name: Tweetbot
+    id: 1384080005
+
 omz_user:
   name: "{{ ansible_user_id }}"
   group: "{{ ansible_user_gid }}"
+
 omz_zshrc_create: false
