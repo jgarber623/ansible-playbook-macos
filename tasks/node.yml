@@ -6,6 +6,7 @@
 - name: Check if nvm is activated.
   command: command -v nvm
   register: nvm_activated
+  failed_when: false
   when: nvm_script.stat.exists
 
 - name: Source nvm.
