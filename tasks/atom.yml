@@ -1,0 +1,15 @@
+- name: Ensure Atom is installed.
+  homebrew_cask:
+    name: atom
+
+- name: Check for Atom packages file.
+  stat:
+    path: "{{ lookup('env', 'HOME') }}/.atom/packages.txt"
+  register: atom_packages
+
+- name: Install Atom packages.
+  command: apm install {{ item }}
+  args:
+    creates: "{{ lookup('env', 'HOME') }}/.atom/packages/{{ item }}"
+  with_lines: "{{ cat {{ atom_packages.stat.path }} }}"
+  when: atom_packages.stat.exists

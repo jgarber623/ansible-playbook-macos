@@ -35,4 +35,7 @@
     - import_tasks: tasks/mas.yml
       when: mas_installed_apps
       tags: ["mas"]
+    - import_tasks: tasks/atom.yml
+      when: configure_atom
+      tags: ["atom"]
   post_tasks:

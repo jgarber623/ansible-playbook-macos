@@ -1,7 +1,6 @@
 - name: Ensure mas-cli is installed.
   homebrew:
     name: mas
-    state: latest
 
 - name: Install configured Mac App Store apps.
   mas:

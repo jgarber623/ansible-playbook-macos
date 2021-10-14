@@ -1,3 +1,4 @@
+configure_atom: true
 configure_dotfiles: true
 
 dotfiles_repo: https://github.com/jgarber623/dotfiles
