@@ -11,5 +11,5 @@
   command: apm install {{ item }}
   args:
     creates: "{{ lookup('env', 'HOME') }}/.atom/packages/{{ item }}"
-  with_lines: "{{ cat {{ atom_packages.stat.path }} }}"
+  with_lines: cat {{ atom_packages.stat.path }} # noqa deprecated-bare-vars
   when: atom_packages.stat.exists
