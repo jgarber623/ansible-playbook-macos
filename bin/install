@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+function puts {
+  echo "[ install ] $1"
+}
+
+puts "Running install script..."
+
+ansible-playbook main.yml $@
+
+puts "🎉 Done!"
