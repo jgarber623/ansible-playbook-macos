@@ -144,78 +144,44 @@ homebrew_cask_apps:
   - yubico-yubikey-manager
 
 mas_installed_apps:
-  - name: 1Blocker
-    id: 1365531024
-  - name: Airmail
-    id: 918858936
-  - name: Bear
-    id: 1091189122
-  - name: Cardhop
-    id: 1290358394
-  - name: Clear
-    id: 504544917
-  - name: Contrast
-    id: 1254981365
-  - name: Day One
-    id: 1055511498
-  - name: Deliveries
-    id: 924726344
-  - name: Fantastical
-    id: 975937182
-  - name: GarageBand
-    id: 682658836
-  - name: GIF Brewery 3
-    id: 1081413713
-  - name: GoodNotes
-    id: 1444383602
-  - name: Icon Slate
-    id: 439697913
-  - name: iMovie
-    id: 408981434
-  - name: Instapaper
-    id: 288545208
-  - name: Instapaper Save
-    id: 1481302432
-  - name: JSONPeep
-    id: 1458969831
-  - name: Keynote
-    id: 409183694
-  - name: Keypad
-    id: 928906884
-  - name: Mactracker
-    id: 430255202
-  - name: Marked 2
-    id: 890031187
-  - name: Monity
-    id: 915542151
-  - name: Moom
-    id: 419330170
-  - name: Name Mangler
-    id: 603637384
-  - name: Numbers
-    id: 409203825
-  - name: Pages
-    id: 409201541
-  - name: Paprika Recipe Manager 3
-    id: 1303222628
-  - name: Patterns
-    id: 429449079
-  - name: Pixelmator
-    id: 407963104
-  - name: Pixelmator Pro
-    id: 1289583905
-  - name: Playgrounds
-    id: 1496833156
-  - name: Reeder
-    id: 1529448980
-  - name: Slack
-    id: 803453959
-  - name: StopTheMadness
-    id: 1376402589
-  - name: The Unarchiver
-    id: 425424353
-  - name: Tweetbot
-    id: 1384080005
+  - 1365531024 # 1Blocker
+  - 918858936  # Airmail
+  - 1091189122 # Bear
+  - 1290358394 # Cardhop
+  - 504544917  # Clear
+  - 1254981365 # Contrast
+  - 1055511498 # Day One
+  - 924726344  # Deliveries
+  - 975937182  # Fantastical
+  - 682658836  # GarageBand
+  - 1081413713 # GIF Brewery 3
+  - 1444383602 # GoodNotes
+  - 439697913  # Icon Slate
+  - 408981434  # iMovie
+  - 288545208  # Instapaper
+  - 1481302432 # Instapaper Save
+  - 1458969831 # JSONPeep
+  - 409183694  # Keynote
+  - 928906884  # Keypad
+  - 430255202  # Mactracker
+  - 890031187  # Marked 2
+  - 915542151  # Monity
+  - 419330170  # Moom
+  - 603637384  # Name Mangler
+  - 409203825  # Numbers
+  - 409201541  # Pages
+  - 1303222628 # Paprika Recipe Manager 3
+  - 429449079  # Patterns
+  - 407963104  # Pixelmator
+  - 1289583905 # Pixelmator Pro
+  - 1496833156 # Playgrounds
+  - 1529448980 # Reeder
+  - 803453959  # Slack
+  - 1376402589 # StopTheMadness
+  - 425424353  # The Unarchiver
+  - 1384080005 # Tweetbot
+
+mas_upgrade_all_apps: false
 
 omz_user:
   name: "{{ ansible_user_id }}"

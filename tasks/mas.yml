@@ -1,0 +1,14 @@
+- name: Ensure mas-cli is installed.
+  homebrew:
+    name: mas
+    state: latest
+
+- name: Install configured Mac App Store apps.
+  mas:
+    id: "{{ item }}"
+  with_items: "{{ mas_installed_apps }}"
+
+- name: Upgrade all installed Mac App Store apps.
+  mas:
+    upgrade_all: yes
+  when: mas_upgrade_all_apps
