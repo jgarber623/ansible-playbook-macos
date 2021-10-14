@@ -9,5 +9,5 @@
 
 - name: Upgrade all installed Mac App Store apps.
   mas:
-    upgrade_all: yes
+    upgrade_all: true
   when: mas_upgrade_all_apps
