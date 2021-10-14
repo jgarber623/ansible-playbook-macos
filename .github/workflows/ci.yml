@@ -37,8 +37,6 @@ jobs:
         run: |
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
-      - name: Uninstall GitHub Actions' pre-installed nvm
-        run: rm -rf "$NVM_DIR"
       - uses: actions/checkout@v2
       - name: Configure test environment
         run: cp ./test/config.yml ./config.yml

@@ -34,8 +34,4 @@
       when: configure_dotfiles
       tags: ["dotfiles"]
   tasks:
-    - import_tasks: tasks/ruby.yml
-      tags: ["ruby"]
-    - import_tasks: tasks/node.yml
-      tags: ["node"]
   post_tasks:
