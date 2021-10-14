@@ -40,6 +40,7 @@ homebrew_taps:
 homebrew_installed_packages:
   - base64
   - circleci
+  - doctl
   - fd
   - fx
   - gh
