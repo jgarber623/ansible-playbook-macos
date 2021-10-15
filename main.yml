@@ -5,8 +5,7 @@
     - config.default.yml
   vars_prompt:
     - name: homebrew_github_token
-      prompt: "Enter a value for HOMEBREW_GITHUB_TOKEN:"
-      confirm: true
+      prompt: "Enter a value for HOMEBREW_GITHUB_TOKEN"
   pre_tasks:
     - name: Include additional custom configuration
       include_vars: "{{ item }}"
