@@ -29,4 +29,5 @@
 - name: Enable Homebrew's ssh-agent for this user.
   community.general.launchd:
     name: "{{ ssh_agent_launchd_service }}"
+    state: started
     enabled: true
