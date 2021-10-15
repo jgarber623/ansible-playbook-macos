@@ -10,7 +10,7 @@
 
 - name: Disable macOS' default ssh-agent for this user.
   community.general.launchd:
-    name: user/{{ ansible_user_id }}/com.openssh.ssh-agent
+    name: user/{{ ansible_user_uid }}/com.openssh.ssh-agent
     enabled: false
 
 - name: Copy custom launchd service for Homebrew's ssh-agent.
