@@ -11,6 +11,7 @@
 - name: Disable macOS' default ssh-agent for this user.
   community.general.launchd:
     name: com.openssh.ssh-agent
+    state: unloaded
     enabled: false
 
 - name: Ensure ~/Library/LaunchAgents directory exists.
