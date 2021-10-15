@@ -1,5 +1,5 @@
 - name: Ensure Atom is installed.
-  homebrew_cask:
+  community.general.homebrew_cask:
     name: atom
 
 - name: Check for Atom packages file.

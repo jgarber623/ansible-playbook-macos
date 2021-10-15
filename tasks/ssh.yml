@@ -1,5 +1,5 @@
 - name: Ensure openssh is installed.
-  homebrew:
+  community.general.homebrew:
     name: openssh
 
 - name: Ensure ~/.ssh directory exists.
