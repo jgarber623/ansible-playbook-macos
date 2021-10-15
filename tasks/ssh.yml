@@ -1,0 +1,25 @@
+- name: Ensure openssh is installed.
+  homebrew:
+    name: openssh
+
+- name: Ensure ~/.ssh directory exists.
+  file:
+    path: ~/.ssh
+    state: directory
+    mode: u=rwX,g=rX,o=rX
+
+- name: Disable macOS' default ssh-agent for this user.
+  launchd:
+    name: user/{{ lookup('env', 'UID') }}/com.openssh.ssh-agent
+    enabled: false
+
+- name: Copy custom launchd service for Homebrew's ssh-agent.
+  template:
+    src: ssh-agent.plist.j2
+    dest: ~/Library/LaunchAgents/{{ ssh_agent_launchd_service }}.plist
+    mode: u=rw,g=r,o=r
+
+- name: Enable Homebrew's ssh-agent for this user.
+  launchd:
+    name: "{{ ssh_agent_launchd_service }}"
+    enabled: true

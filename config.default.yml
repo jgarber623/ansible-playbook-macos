@@ -1,5 +1,6 @@
 configure_atom: true
 configure_dotfiles: true
+configure_ssh: true
 
 dotfiles_repo: https://github.com/jgarber623/dotfiles
 dotfiles_repo_version: main
@@ -16,6 +17,7 @@ dotfiles_files:
   - .oh-my-zsh/custom/aliases.zsh
   - .oh-my-zsh/custom/functions.zsh
   - .oh-my-zsh/custom/homebrew.zsh
+  - .oh-my-zsh/custom/ssh.zsh
   - .oh-my-zsh/custom/themes/jgarber.zsh-theme
   - .curlrc
   - .gemrc
@@ -26,6 +28,7 @@ dotfiles_files:
   - .npmrc
   - .pryrc
   - .rbenv/default-gems
+  - .ssh/config
   - .tmux.conf
   - .wgetrc
   - .zshrc
@@ -190,3 +193,7 @@ omz_user:
   group: "{{ ansible_user_gid }}"
 
 omz_zshrc_create: false
+
+ssh_agent_bin_path: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}/bin/ssh-agent"
+ssh_agent_launchd_service: org.homebrew.openssh.ssh-agent
+ssh_agent_socket_path: ~/.ssh/agent

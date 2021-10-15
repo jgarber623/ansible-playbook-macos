@@ -38,4 +38,7 @@
     - import_tasks: tasks/atom.yml
       when: configure_atom
       tags: ["atom"]
+    - import_tasks: tasks/ssh.yml
+      when: configure_ssh
+      tags: ["ssh"]
   post_tasks:
