@@ -9,7 +9,7 @@
     mode: u=rwX,g=rX,o=rX
 
 - name: Disable macOS' default ssh-agent for this user.
-  launchd:
+  community.general.launchd:
     name: user/{{ lookup('env', 'UID') }}/com.openssh.ssh-agent
     enabled: false
 
@@ -20,6 +20,6 @@
     mode: u=rw,g=r,o=r
 
 - name: Enable Homebrew's ssh-agent for this user.
-  launchd:
+  community.general.launchd:
     name: "{{ ssh_agent_launchd_service }}"
     enabled: true
