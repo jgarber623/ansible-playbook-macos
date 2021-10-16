@@ -31,13 +31,16 @@
       when: configure_dotfiles
       tags: ["dotfiles"]
   tasks:
-    - import_tasks: tasks/mas.yml
-      when: mas_installed_apps
-      tags: ["mas"]
     - import_tasks: tasks/atom.yml
       when: configure_atom
       tags: ["atom"]
     - import_tasks: tasks/ssh.yml
       when: configure_ssh
       tags: ["ssh"]
+    - import_tasks: tasks/terminal.yml
+      when: configure_terminal
+      tags: ["terminal"]
+    - import_tasks: tasks/mas.yml
+      when: mas_installed_apps
+      tags: ["mas"]
   post_tasks:
