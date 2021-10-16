@@ -8,7 +8,7 @@
 - name: Import custom Terminal profile.
   command: open {{ role_path }}/files/terminal/profile.terminal
   changed_when: false
-  when: "'SpaceGray Eighties Dull' not in terminal_theme.stdout"
+  when: "'SpaceGray Eighties Dull' not in terminal_profile.stdout"
 
 - name: Set custom Terminal profile as default.
   community.general.osx_defaults:
@@ -18,4 +18,4 @@
   with_items:
     - "Default Window Settings"
     - "Startup Window Settings"
-  when: "'SpaceGray Eighties Dull' not in terminal_theme.stdout"
+  when: "'SpaceGray Eighties Dull' not in terminal_profile.stdout"
