@@ -137,14 +137,11 @@ homebrew_cask_apps:
   - little-snitch
   - menuwhere
   - micro-snitch
-  - monity-helper
-  - onyx
+  - jgarber623/extras/postico2
   - proxyman
-  - psequel
   - rocket
   - screens
   - signal
-  - sketch
   - transmission
   - transmit
   - vlc
@@ -153,11 +150,13 @@ homebrew_cask_apps:
 
 mas_installed_apps:
   - 1365531024 # 1Blocker
-  - 918858936  # Airmail
+  - 918858936  # Airmail 5
+  - 640199958  # Apple Developer
   - 1091189122 # Bear
   - 1290358394 # Cardhop
   - 504544917  # Clear
   - 1254981365 # Contrast
+  - 953286746  # Darkroom
   - 1055511498 # Day One
   - 924726344  # Deliveries
   - 975937182  # Fantastical
@@ -166,28 +165,25 @@ mas_installed_apps:
   - 1444383602 # GoodNotes
   - 439697913  # Icon Slate
   - 408981434  # iMovie
+  - 1136220934 # Infuse 7
   - 288545208  # Instapaper
   - 1481302432 # Instapaper Save
-  - 1458969831 # JSONPeep
   - 409183694  # Keynote
-  - 928906884  # Keypad
   - 430255202  # Mactracker
   - 890031187  # Marked 2
-  - 915542151  # Monity
   - 419330170  # Moom
   - 603637384  # Name Mangler
   - 409203825  # Numbers
   - 409201541  # Pages
   - 1303222628 # Paprika Recipe Manager 3
   - 429449079  # Patterns
-  - 407963104  # Pixelmator
   - 1289583905 # Pixelmator Pro
-  - 1496833156 # Playgrounds
   - 1529448980 # Reeder
   - 803453959  # Slack
   - 1376402589 # StopTheMadness
+  - 1496833156 # Swift Playgrounds
   - 425424353  # The Unarchiver
-  - 1384080005 # Tweetbot
+  - 1384080005 # Tweetbot 3
 
 mas_upgrade_all_apps: false
 
