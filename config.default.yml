@@ -67,6 +67,7 @@ homebrew_installed_packages:
   - node
   - nvm
   - openssh
+  - php
   - pidof
   - pygments
   - rbenv
