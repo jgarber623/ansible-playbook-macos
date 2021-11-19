@@ -76,7 +76,6 @@ homebrew_installed_packages:
   - jgarber623/extras/rbenv-each
   - jgarber623/extras/rbenv-env
   - jgarber623/extras/rbenv-gem-update
-  - rbenv-use
   - ruby-build
   - screen
   - svgo
@@ -85,7 +84,6 @@ homebrew_installed_packages:
   - tree
   - xh
   - wget
-  - wrk
   - yarn
   - ykman
   - youtube-dl
