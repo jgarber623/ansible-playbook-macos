@@ -18,7 +18,6 @@ dotfiles_files:
   - .bundle/config
   - .oh-my-zsh/custom/aliases.zsh
   - .oh-my-zsh/custom/functions.zsh
-  - .oh-my-zsh/custom/gpg.zsh
   - .oh-my-zsh/custom/homebrew.zsh
   - .oh-my-zsh/custom/ssh.zsh
   - .oh-my-zsh/custom/themes/jgarber.zsh-theme
