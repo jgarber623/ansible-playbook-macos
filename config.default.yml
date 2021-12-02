@@ -26,6 +26,7 @@ dotfiles_files:
   - .gitattributes
   - .gitconfig
   - .gitignore
+  - .gnupg/gpg-agent.conf
   - .irbrc
   - .npmrc
   - .pryrc
