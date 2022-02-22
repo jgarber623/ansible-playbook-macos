@@ -18,8 +18,8 @@ dotfiles_files:
   - .bundle/config
   - .config/bat/config
   - .oh-my-zsh/custom/aliases.zsh
+  - .oh-my-zsh/custom/dotenv.zsh
   - .oh-my-zsh/custom/functions.zsh
-  - .oh-my-zsh/custom/homebrew.zsh
   - .oh-my-zsh/custom/ssh.zsh
   - .oh-my-zsh/custom/themes/jgarber.zsh-theme
   - .curlrc

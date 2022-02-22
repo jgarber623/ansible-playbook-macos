@@ -12,9 +12,9 @@
       with_fileglob:
         - config.yml
       tags: ["always"]
-    - name: Ensure ~/.brewrc file exports HOMEBREW_GITHUB_TOKEN
+    - name: Ensure ~/.env file exports HOMEBREW_GITHUB_TOKEN
       lineinfile:
-        path: "{{ lookup('env', 'HOME') }}/.brewrc"
+        path: "{{ lookup('env', 'HOME') }}/.env"
         regexp: "^export HOMEBREW_GITHUB_TOKEN="
         line: export HOMEBREW_GITHUB_TOKEN={{ homebrew_github_token }}
         create: true
