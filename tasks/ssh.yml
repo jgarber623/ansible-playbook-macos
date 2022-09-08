@@ -3,7 +3,7 @@
     name: openssh
 
 - name: Ensure ~/.ssh directory exists.
-  file:
+  ansible.builtin.file:
     path: ~/.ssh
     state: directory
     mode: u=rwX,g=rX,o=rX
@@ -15,13 +15,13 @@
     enabled: false
 
 - name: Ensure ~/Library/LaunchAgents directory exists.
-  file:
+  ansible.builtin.file:
     path: ~/Library/LaunchAgents
     state: directory
     mode: u=rwX,g=rX,o=rX
 
 - name: Copy custom launchd service for Homebrew's ssh-agent.
-  template:
+  ansible.builtin.template:
     src: ssh-agent.plist.j2
     dest: ~/Library/LaunchAgents/{{ ssh_agent_launchd_service }}.plist
     mode: u=rw,g=r,o=r

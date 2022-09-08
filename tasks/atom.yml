@@ -3,12 +3,12 @@
     name: atom
 
 - name: Check for Atom packages file.
-  stat:
+  ansible.builtin.stat:
     path: "{{ lookup('env', 'HOME') }}/.atom/packages.txt"
   register: atom_packages
 
 - name: Install Atom packages.
-  command: apm install {{ item }}
+  ansible.builtin.command: apm install {{ item }}
   args:
     creates: "{{ lookup('env', 'HOME') }}/.atom/packages/{{ item }}"
   with_lines: cat {{ atom_packages.stat.path }} # noqa deprecated-bare-vars

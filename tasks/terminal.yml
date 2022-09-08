@@ -6,7 +6,7 @@
   register: terminal_profile
 
 - name: Import custom Terminal profile.
-  command: open {{ playbook_dir }}/files/terminal/SpaceGray\ Eighties\ Dull.terminal
+  ansible.builtin.command: open {{ playbook_dir }}/files/terminal/SpaceGray\ Eighties\ Dull.terminal
   changed_when: false
   when: terminal_profile != "SpaceGray Eighties Dull"
 
