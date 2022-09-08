@@ -50,7 +50,7 @@ jobs:
         run: |
           git config --global --add safe.directory ~/.oh-my-zsh
           git update-index --assume-unchanged .gitconfig
-        working-directory: ~/.dotfiles
+        working-directory: /Users/runner/.dotfiles
       - name: Ensure idempotence
         run: |
           ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
