@@ -48,7 +48,6 @@ jobs:
         run: ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
       - name: Ensure idempotence
         run: |
-          git config --global --add safe.directory ~/.oh-my-zsh
           ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
           tail "$ANSIBLE_LOG_PATH" | grep -q 'changed=0.*failed=0' && (echo '✅ Idempotence check passed!' && exit 0) || (echo '❌ Idempotence check failed!' && exit 1)
         env:
