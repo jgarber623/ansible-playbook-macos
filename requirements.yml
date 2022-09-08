@@ -10,7 +10,7 @@ roles:
 
 collections:
   - name: community.general
-    version: "3.8.0"
+    version: "3.8.9"
   - name: geerlingguy.mac
     source: https://github.com/geerlingguy/ansible-collection-mac
     type: git
