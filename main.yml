@@ -26,7 +26,6 @@
     - role: ctorgalson.oh-my-zsh
       when: configure_dotfiles
       tags: ["dotfiles"]
-      become: true
     - role: jgarber623.dotfiles
       when: configure_dotfiles
       tags: ["dotfiles"]
