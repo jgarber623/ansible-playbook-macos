@@ -27,7 +27,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - macos-11
+          - macos-12
     env:
       ANSIBLE_FORCE_COLOR: 1
     steps:
