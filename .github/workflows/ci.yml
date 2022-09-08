@@ -46,11 +46,6 @@ jobs:
         run: ansible-playbook main.yml --syntax-check
       - name: Run playbook
         run: ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
-      - name: Temporarily configure Git for idempotence check
-        run: |
-          git config --global --add safe.directory /Users/runner/.oh-my-zsh
-          git update-index --assume-unchanged .gitconfig
-        working-directory: /Users/runner/.dotfiles
       - name: Ensure idempotence
         run: |
           ansible-playbook main.yml --extra-vars "homebrew_github_token=${{ secrets.HOMEBREW_GITHUB_TOKEN }}"
