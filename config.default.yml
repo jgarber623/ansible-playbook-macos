@@ -36,7 +36,6 @@ dotfiles_files:
   - .zshrc
 
 homebrew_taps:
-  - heroku/brew
   - homebrew/cask-drivers
   - homebrew/cask-fonts
   - jgarber623/extras
