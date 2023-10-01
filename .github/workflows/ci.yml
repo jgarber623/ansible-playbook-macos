@@ -10,7 +10,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
@@ -38,7 +38,7 @@ jobs:
         run: |
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Configure test environment
         run: cp ./test/config.yml ./config.yml
       - run: bin/bootstrap
